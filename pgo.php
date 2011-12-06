@@ -109,9 +109,8 @@ $phpbb3P2 = array (
 	'http://'.$SERVER.'/phpbb3/ucp.php?mode=register'
 );
 
-$otherp1 = array (
-	'http://'.$SERVER.'/micro_bench.php'
-);
+$otherP1 = array ();
+$otherP2 = array ();
 // ########################################################################################################### //
 
 
