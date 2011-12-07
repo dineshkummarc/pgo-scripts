@@ -1,3 +1,30 @@
-pgo-scripts
-Scripts used to automate the collection of profiling data from PGI builds of PHP.
+Repository: pgo-scripts
+Scripts used to automated PGO builds of PHP.
+
+See pgo.php for list of applications and URLs we use to train the instrumented PHP binary.  
+Currently, the following applications and versions are used:
+
+  - Drupal 7.8
+  - Wordpress 3.2.1
+  - Joomla 1.7.2
+  - MediaWiki 1.17.0
+  - phpBB 3.0.9
+
+Drupal
+Default install with MySQL DB.  Activated several plugins, including forum and blog.  A forum, blog 
+and article post were also created to allow us to profile different types of pages.
+
+Wordpress
+Default install with MySQL DB.  Created a second test blog entry which will end up being called 
+"wordpress/index.php?p=4".  Also created a comment on this new blog entry.
+
+Joomla
+Default install with MySQL DB.  Opted to import the sample websites during the installation.  We 
+also access these during the profiling stage (see pgo.php).
+
+Mediawiki
+Default install with MySQL DB.  Created a second page called "Test_Page".
+
+phpBB
+Default install with MySQL DB.
 
