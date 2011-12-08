@@ -9,6 +9,7 @@ Currently, the following applications and versions are used:
   - Joomla 1.7.2
   - MediaWiki 1.17.0
   - phpBB 3.0.9
+  - Symfony 2.0.6 Standard Edition
 
 Drupal
 Default install with MySQL DB.  Activated several plugins, including forum and blog.  A forum, blog 
@@ -27,4 +28,9 @@ Default install with MySQL DB.  Created a second page called "Test_Page".
 
 phpBB
 Default install with MySQL DB.
+
+Symfony2
+Configured with MySQL DB.
+Installed Acme Pizza Bundle: https://github.com/beberlei/AcmePizzaBundle
+
 

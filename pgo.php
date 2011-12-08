@@ -44,7 +44,7 @@ $wordpressP1 = array(
 );
 $wordpressP2 = array(
 	'http://'.$SERVER.':'.$PORT.'/wordpress/wp-login.php',
-	'http://'.$SERVER.':'.$PORT.'/wordpress/?m=201111'
+	'http://'.$SERVER.':'.$PORT.'/wordpress/?m=201112'
 );
 
 $mediawikiP1 = array(
@@ -118,10 +118,10 @@ $symfony2P1 = array (
 	'http://'.$SERVER.':'.$PORT.'/symfony/web/app_dev.php/acme-pizza/pizza/create',
 	'http://'.$SERVER.':'.$PORT.'/symfony/web/app_dev.php/acme-pizza/order/index',
 	'http://'.$SERVER.':'.$PORT.'/symfony/web/app_dev.php/acme-pizza/order/list',
-	'http://'.$SERVER.':'.$PORT.'/symfony/web/app_dev.php/acme-pizza/order/show/6',
+	'http://'.$SERVER.':'.$PORT.'/symfony/web/app_dev.php/acme-pizza/order/show/12',
 	'http://'.$SERVER.':'.$PORT.'/symfony/web/app_dev.php/acme-pizza/pizza/list',
 	'http://'.$SERVER.':'.$PORT.'/symfony/web/app_dev.php/acme-pizza/customer/list',
-	'http://'.$SERVER.':'.$PORT.'/symfony/web/app_dev.php/acme-pizza/pizza/update/31'
+	'http://'.$SERVER.':'.$PORT.'/symfony/web/app_dev.php/acme-pizza/pizza/update/79'
 );
 $symfony2P2 = array();
 
@@ -140,6 +140,7 @@ if ( isset($argv[1]) && ($argv[1] == 'printnum') )  {
 }
 
 $total = 0;
+$error = 0;
 foreach ( $apps as $app )  {
 	echo "Testing P1 URIs in $app\n";
 	for ( $i=0; $i < $p1count; $i++ )  {
@@ -149,6 +150,7 @@ foreach ( $apps as $app )  {
 			$stat = file_get_contents("$url");
 			if ( $stat === FALSE )  {
 				echo "Error retrieving $url\n";
+				$error++;
 			}
 			$total++;
 		}
@@ -162,12 +164,13 @@ foreach ( $apps as $app )  {
 			$stat = file_get_contents("$url");
 			if ( $stat === FALSE )  {
 				echo "Error retrieving $url\n";
+				$error++;
 			}
 			$total++;
 		}
 	}
 }
 
-echo "Transactions: $total\n";
+echo "Transactions: $total, Errors: $error\n";
 
 ?>
