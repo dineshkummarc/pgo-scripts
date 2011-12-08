@@ -203,13 +203,3 @@ mkdir 'c:\php-pgo\pgc\'+$dirname+'nts'
 copy-item -Force "$tsbuild/*.pgc" -destination 'c:\php-pgo\pgc\'+$dirname+'ts' -recurse
 copy-item -Force "$ntsbuild/*.pgc" -destination 'c:\php-pgo\pgc\'+$dirname+'nts' -recurse
 ##FIXME:  zip up .pgc files
-
-## Copy results to windows.php.net
-$hostname = "windows.php.net"
-$username = "windows.php.net_ostc"
-$password = 'ZxyS#$0a9mN'
-$basepath = "/pftt/perf"
-#Start-Sleep -s 10
-#c:\wcat\alexftp\ftps -h $hostname -U $username -P `"$password`" -ssl Implicit -sslInvalidServerCertHandling Accept -p c:\wcat\results-archive\$dirname\results-$dirname.html $basepath/
-#Start-Sleep -s 10
-
